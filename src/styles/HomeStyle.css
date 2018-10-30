@@ -1,0 +1,144 @@
+/* .Background {
+    display: flex;
+    background-color: #12173d;
+    height: 100vh;
+    width: 100vw;
+    top: 0; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    position: absolute;
+    justify-content: center;
+}
+
+.HeaderBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.HeaderText {
+    color: #ffccd0;
+    font-weight: 900; 
+    font-size: 13em;
+    font-family: 'Nanum Gothic';
+    text-shadow: 7px 5px 2px #5ab9e5, 8px 6px 3px #643499;
+    margin: 0;
+}
+
+.SubheadingText {
+    color: #ffccd0;
+    font-weight: 900; 
+    font-size: 3em;
+    font-family: 'Nanum Gothic';
+    text-shadow: 3px 2px 1px #5ab9e5, 3.5px 2.5px 1.5px #643499;
+    margin: 0;
+    align-self: flex-end;
+} */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0 auto;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    font-family: 'Nanum Gothic';
+    justify-content: center;
+    background-color: #1d212b;
+}
+
+.HeaderText {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: auto;
+    font-family: 'Nanum Gothic';
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 4.5em;
+}
+
+.TextPosition {
+    display: flex;
+    text-align: center;
+}
+
+.Container {
+    display: flex;
+    font-family: 'Nanum Gothic';
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 55vw;
+    height: 60vh;
+    color: #252b37;
+    background-color: #151823;
+    animation: textColor 10s ease infinite;
+}
+.Container:after {
+    font-family: 'Nanum Gothic';
+    position: absolute;
+    content: '';
+    top: 5vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.75);
+    -webkit-filter: blur(15vw);
+    -moz-filter: blur(15vw);
+    -ms-filter: blur(15vw);
+    filter: blur(15vw);
+    background: linear-gradient(100deg, #e5959f, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+}
+@keyframes animateGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes textColor {
+    0% {
+        color: #7e0fff;
+    }
+    50% {
+        color: #e5959f;
+    }
+    100% {
+        color: #7e0fff;
+    }
+}
+
+.ButtonPosition {
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: column; */
+    align-content: space-around;
+    align-items: center;
+}
+
+.Button {
+    font-family: 'Nanum Gothic';
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #7e0fff;
+    animation: textColor 10s ease infinite;
+}
