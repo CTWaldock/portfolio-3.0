@@ -1,0 +1,41 @@
+.HeaderText {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: auto;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 4.5em;
+}
+
+.TextPosition {
+    display: flex;
+    text-align: center;
+}
+
+@keyframes textColor {
+    0% {
+        color: #7e0fff;
+    }
+    50% {
+        color: #e5959f;
+    }
+    100% {
+        color: #7e0fff;
+    }
+}
+
+.ButtonPosition {
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center;
+}
+
+.Button {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #7e0fff;
+    animation: textColor 10s ease infinite;
+}

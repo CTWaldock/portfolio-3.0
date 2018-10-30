@@ -1,34 +1,20 @@
 import React, { Component } from 'react';
-import '../styles/HomeStyle.css';
+import Container from '../components/common/Container';
+import HomeLink from '../components/home/HomeLink';
 
 class Home extends Component {
     render() {
         return (
-            <div className={'Container'}>
+            <Container>
                 <div className={'ButtonPosition'}>
-                    <div>
-                        <a href={'/about'} className={'Button'}>
-                            ABOUT
-                        </a>
-                    </div>
-
-                    <div>
-                        <a href={'/project'} className={'Button'}>
-                            PROJECTS
-                        </a>
-                    </div>
-
-                    <div>
-                        <a href={'/contact'} className={'Button'}>
-                            CONTACT
-                        </a>
-                    </div>
+                    <HomeLink routeTo={'/about'} title={'ABOUT'} />
+                    <HomeLink routeTo={'/projects'} title={'PROJECTS'} />
+                    <HomeLink routeTo={'/contact'} title={'CONTACT'} />
                 </div>
-
                 <div className={'TextPosition'}>
                     <h1 className={'HeaderText'}>ようこそ</h1>
                 </div>
-            </div>
+            </Container>
         );
     }
 }
